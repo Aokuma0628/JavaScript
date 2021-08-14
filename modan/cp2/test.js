@@ -29,14 +29,14 @@ function printc(num) {
 // print('0 <= ""', 0 <= "");											//1
 
 //5
-printc(5);
-let a5 = 1;
-let b5 = 'aaa';
+// printc(5);
+// let a5 = 1;
+// let b5 = 'aaa';
 
-print('a || b', a5 || b5);					//1
-print('a ? a : b', a5 ? a5 : b5);		//1
-print('a && b', a5 && b5);				//1	☑
-print('a && b と同じ方法', '?');		//☑
+// print('a || b', a5 || b5);					//1
+// print('a ? a : b', a5 ? a5 : b5);		//1
+// print('a && b', a5 && b5);				//1	☑
+// print('a && b と同じ方法', '?');		//☑
 
 //6
 // printc(6);
