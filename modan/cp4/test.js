@@ -137,43 +137,131 @@ function printc(num) {
 // print('set(1,2)', `x=${test4.getX}, y=${test4.getY}`);
 
 
-//5
-printc(5);
+// //5
+// printc(5);
 
-function createGreateble(str) {
-	const result = new String(str);
-	result.greet = function(greeting) {
-		return `${greeting}, ${this}!`;
-	};
-	return result;
-}
+// function createGreateble(str) {
+// 	const result = new String(str);
+// 	result.greet = function(greeting) {
+// 		return `${greeting}, ${this}!`;
+// 	};
+// 	return result;
+// }
 
-const g = createGreateble('World');
-console.log(g.greet('Hello'));
+// const g = createGreateble('World');
+// console.log(g.greet('Hello'));
 
-//6
-printc(6);
+// //6
+// printc(6);
 
-class People {
-	constructor(name, age) {
-		this.name = name;
-		this.age = age;
-	}
-}
+// class People {
+// 	constructor(name, age) {
+// 		this.name = name;
+// 		this.age = age;
+// 	}
+// }
 
-const withGreeter = baseclass => 
-	class extends baseclass {
-		greet(greeting) {
-			return `${greeting}, ${this.name}!`;
-		}
-	};
+// const withGreeter = baseclass => 
+// 	class extends baseclass {
+// 		greet(greeting) {
+// 			return `${greeting}, ${this.name}!`;
+// 		}
+// 	};
 
-const pClass = withGreeter(People);
-const p = new pClass('Taro', 42);
-print('Hello Taro', p.greet('Hello'));
+// const pClass = withGreeter(People);
+// const p = new pClass('Taro', 42);
+// print('Hello Taro', p.greet('Hello'));
 
 //7
-printc(7);
+//提案ステージのため飛ばす
+
+// //8
+// printc(8);
+
+// class Node {
+// 	depth() {
+// 		throw Error('abstract method');
+// 	}
+// }
+
+// class Parent extends Node {
+// 	constructor(value , children) {
+// 		super();
+// 		//
+// 	}
+// 	depth() {
+// 		return 1 + Math.max(...children.map(n => n.depth()));
+// 	}
+// }
+
+// class Leaf extends Leaf {
+// 	constructor(value) {
+// 		super();
+// 		//
+// 	}
+// 	depth() {
+// 		return 1;
+// 	}
+// }
+
+
+// //9
+// printc(9);
+
+// class Random {
+// 	constructor() {
+// 		//
+// 	}
+// 	static nextDouble(low, high) {
+// 		return Math.random() * (high - low) + low;
+// 	}
+// 	static nextInt(low, high) {
+// 		let min = Math.floor(low);
+// 		let max = Math.floor(high);
+// 		return Math.floor(Math.random() * (max - min) + min);
+// 	}
+// 	static nextElement(array) {
+// 		return array[Math.floor(Math.random() * (array.length - 1))];
+// 	}
+// }
+
+// //const r = new Random();
+// print('double 1 - 2', Random.nextDouble(1,2));
+// print('int 5 - 10', Random.nextInt(5,10));
+// print('array', Random.nextElement([2,3,4,5,6]));
+
+// //10
+// printc(10);
+
+
+// class BankAccount {
+// 	constructor(amount) {
+// 		this.amount = amount;
+// 	}
+// }
+
+// class SavingAccount extends BankAccount {
+// 	constructor(interest) {
+// 		super();
+// 		this.interest = interest;
+// 	}
+
+// 	addInterest (interest) {
+// 		this.interest += interest;
+// 	}
+// }
+
+// class CheckingAccount extends BankAccount {
+// 	constructor(fee) {
+// 		super();
+// 		this.fee = fee;
+// 	}
+// 	withdrawal (pay) {
+// 		this.amount -= (pay + this.fee);
+// 		return pay;
+// 	}
+
+// }
 
 
 // ######### Question.1 ##########
@@ -212,3 +300,11 @@ printc(7);
 // ######### Question.6 ##########
 // Qus: Hello Taro
 // Ans: Hello, Taro!(string)
+
+// ######### Question.9 ##########
+// Qus: double 1 - 2
+// Ans: 1.2713964658949588(number)
+// Qus: int 5 - 10
+// Ans: 6(number)
+// Qus: array
+// Ans: 5(number)
