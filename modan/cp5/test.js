@@ -56,11 +56,11 @@ function printc(num) {
 //5
 //不明
 
-//7
-printc(7);
+// //7
+// printc(7);
 
-print('1+min', 1 + Number.EPSILON);
-print('2+min', 2 + Number.EPSILON);
+// print('1+min', 1 + Number.EPSILON);
+// print('2+min', 2 + Number.EPSILON);
 //不明
 
 //8
@@ -94,4 +94,90 @@ print('2+min', 2 + Number.EPSILON);
 // }
 
 // print('hour', calcTimeDiffUTC());
+
+// //11
+// printc(11);
+
+// //うるう年とは
+// //西暦が４で割り切れる、かつ、100で割り切れない
+// //もしくは西暦が400で割り切れる
+
+// function isLeapYear(year) {
+// 	if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+// 		return true;
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// }
+
+// let d = new Date();
+// print('2021?', isLeapYear(d.getFullYear()));
+
+// //12
+// printc(12);
+
+// //1970/1/1 は木曜日
+
+// let unix = d.getTime() / 1000; //秒
+// let date = Math.floor(unix / (60 * 60 * 24));
+
+// let day = date % 7 + 4;
+// if (day > 6) {
+// 	day -= 7;
+// }
+
+// print('today day', day);
+
+// //13
+// printc(13);
+
+// function createCalender(date) {
+// 	let cal = '';
+// 	for (let i = 1; i <= 31; i++) {
+// 		date.setDate(i);
+// 		if (i !== date.getDate()) {
+// 			break;
+// 		}
+
+// 		let day = date.getDay();
+// 		switch (day) {
+// 			case 0:
+// 				cal += `${i}`;
+// 				break;
+// 			case 6:
+// 				cal += ` ${i}\n`;
+// 				break;
+// 			default:
+// 				cal += ` ${i}`;
+// 		}
+// 	}
+
+// 	return cal;
+// }
+
+// let d2 = new Date();
+// let cal = createCalender(d2);
+
+// print('calender', cal);
+
+// //14
+// printc(14);
+
+// function diffdate(d1, d2) {
+// 	let t1 = d1.getTime() / 1000;
+// 	let t2 = d2.getTime() / 1000;
+
+// 	let diff = Math.abs(t1 - t2);
+// 	return diff / (60 * 60 * 24);
+// }
+
+// let d14 = new Date();
+// let tmpd = new Date();
+// tmpd.setDate(20);
+// let d142 = new Date(tmpd.setHours(20));
+
+// print('diff', diffdate(d14, d142));
+
+
 
